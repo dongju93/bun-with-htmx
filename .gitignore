@@ -170,3 +170,6 @@ dist
 
 # IntelliJ based IDEs
 .idea
+
+# add
+.DS_Store
