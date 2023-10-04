@@ -173,3 +173,4 @@ dist
 
 # add
 .DS_Store
+package-lock.json
