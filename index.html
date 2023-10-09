@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewpoint"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+        <script src="https://unpkg.com/htmx.org@1.9.6/dist/ext/json-enc.js"></script>
+        <script src="https://unpkg.com/hyperscript.org@0.9.11"></script>
+        <link
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@1.5.10/css/pico.min.css"
+            rel="stylesheet"
+        />
+        <title>Bun x HTMX</title>
+    </head>
+
+    <body>
+        <header class="container">
+            <hgroup>
+                <h1>Bun x HTMX</h1>
+                <h2>Tutorial by somedude</h2>
+            </hgroup>
+        </header>
+        <main class="container">
+            <form
+                hx-post="/todos"
+                hx-target="#todos"
+                hx-ext="json-enc"
+                _="on submit target.reset()"
+            >
+                <label for="todo">New toto</label>
+                <input
+                    id="todo"
+                    name="todo"
+                    type="text"
+                    placeholder="New todo"
+                />
+                <button type="submit">Create</button>
+            </form>
+            <section id="todos" hx-get="/todos" hx-trigger="load"></section>
+        </main>
+    </body>
+</html>

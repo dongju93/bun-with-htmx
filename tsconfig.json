@@ -26,6 +26,7 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "pages/**/*.ts",
-    "pages/**/*.tsx"
+    "pages/**/*.tsx",
+    "*.tsx"
   ]
 }
